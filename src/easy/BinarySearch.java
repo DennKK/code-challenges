@@ -1,8 +1,7 @@
 package easy;
 
-// BinarySearch
-class Solution1 {
-
+// Binary Search
+class BinarySearch {
     public static int search(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;

@@ -1,10 +1,9 @@
 package easy;
 
-// Contains Duplicate
 import java.util.HashSet;
 
-public class Solution2 {
-
+// Contains Duplicate
+public class ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int num : nums) {
