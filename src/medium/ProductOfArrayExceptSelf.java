@@ -1,5 +1,4 @@
 package medium;
-import java.util.Arrays;
 
 // Product of Array Except Self
 public class ProductOfArrayExceptSelf {
