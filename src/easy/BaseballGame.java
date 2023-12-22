@@ -11,16 +11,13 @@ public class BaseballGame {
             if (s.equals("+")) {
                 stack.push(stack.get(stack.size() - 2) + stack.peek());
                 result += stack.peek();
-            }
-            else if (s.equals("D")) {
+            } else if (s.equals("D")) {
                 stack.push(stack.peek() * 2);
                 result += stack.peek();
-            }
-            else if (s.equals("C")) {
+            } else if (s.equals("C")) {
                 result -= stack.peek();
                 stack.pop();
-            }
-            else {
+            } else {
                 stack.push(Integer.parseInt(s));
                 result += stack.peek();
             }
