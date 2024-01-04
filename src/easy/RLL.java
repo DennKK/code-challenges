@@ -2,7 +2,7 @@ package easy;
 
 // 206. Reverse Linked List
 public class RLL {
-    static class ListNode {
+    static private class ListNode {
         public int val;
         public ListNode next;
 
