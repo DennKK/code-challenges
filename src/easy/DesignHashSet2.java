@@ -1,7 +1,7 @@
 package easy;
 
-// Design HashSet
-// fast and easy
+// 705. Design HashSet
+// Second solution
 class DesignHashSet2 {
     boolean[] mp;
 
