@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// 705. Design HashSet
 class DesignHashSet1 {
     private final int SIZE = 1000;
     private final List<List<Integer>> buckets = new ArrayList<>();
