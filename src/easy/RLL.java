@@ -12,7 +12,8 @@ public class RLL {
         }
     }
 
-    public ListNode reverseListIteratively(ListNode head) {
+    // Iterative solution
+    private ListNode reverseListIteratively(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
 
@@ -23,5 +24,21 @@ public class RLL {
             curr = nextNode;
         }
         return prev;
+    }
+
+    // Recursive solution
+    private ListNode reverseList(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode newHead = head;
+        if (head.next != null) {
+            newHead = reverseList(head.next);
+            head.next.next = head;
+        }
+        head.next = null;
+
+        return newHead;
     }
 }
