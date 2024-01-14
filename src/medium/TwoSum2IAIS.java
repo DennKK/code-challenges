@@ -3,22 +3,18 @@ package medium;
 // 167. Two Sum II - Input Array Is Sorted
 public class TwoSum2IAIS {
     // Two pointers solution
-    public int[] twoSum(int[] nums, int target) {
-        int left = 0, right = nums.length - 1;
-        int[] res = new int[2];
-
+    public int[] twoSum(int[] numbers, int target) {
+        int left = 0, right = numbers.length - 1;
         while (left < right) {
-            if (nums[left] + nums[right] == target) {
-                res[0] = left + 1;
-                res[1] = right + 1;
+            if (numbers[left] + numbers[right] == target) {
                 break;
-            } else if (nums[left] + nums[right] > target) {
-                right--;
-            } else {
+            } else if (numbers[left] + numbers[right] < target) {
                 left++;
+            } else {
+                right--;
             }
         }
-        return res;
+        return new int[]{left + 1, right + 1};
     }
 
     // Binary search solution
