@@ -1,6 +1,6 @@
 package easy;
 
-// Binary Search
+// 704. Binary Search
 class BinarySearch {
     public static int search(int[] nums, int target) {
         int start = 0;
