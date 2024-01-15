@@ -1,6 +1,6 @@
 package easy;
 
-// Can Place Flowers
+// 605. Can Place Flowers
 public class CanPlaceFlowers {
     public boolean canPlaceFlowers(int[] flowerbed, int n) {
         int[] f = new int[flowerbed.length + 2];
