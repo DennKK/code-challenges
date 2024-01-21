@@ -3,6 +3,7 @@ package medium;
 import java.util.HashMap;
 import java.util.Map;
 
+// 535. Encode and Decode TinyURL
 public class Codec {
     private final Map<String, String> encodeMap = new HashMap<>();
     private final Map<String, String> decodeMap = new HashMap<>();
