@@ -3,7 +3,7 @@ package medium;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-// Sort an Array
+// 912. Sort an Array
 // Merge sort solution
 public class SortAnArray {
     public int[] sortArray(int[] nums) {
@@ -20,13 +20,9 @@ public class SortAnArray {
         int[] leftArr = new int[mid];
         int[] rightArr = new int[arrSize - mid];
 
-        for (int i = 0; i < mid; i++) {
-            leftArr[i] = arr[i];
-        }
+        System.arraycopy(arr, 0, leftArr, 0, mid);
 
-        for (int i = mid; i < arrSize; i++) {
-            rightArr[i - mid] = arr[i];
-        }
+        if (arrSize - mid >= 0) System.arraycopy(arr, mid, rightArr, 0, arrSize - mid);
 
         mergeSort(leftArr, mid);
         mergeSort(rightArr, arrSize - mid);
@@ -38,8 +34,7 @@ public class SortAnArray {
         while (i < leftArraySize && j < rightArraySize) {
             if (leftArray[i] < rightArray[j]) {
                 array[k++] = leftArray[i++];
-            }
-            else {
+            } else {
                 array[k++] = rightArray[j++];
             }
         }
