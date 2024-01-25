@@ -3,7 +3,7 @@ package medium;
 import java.util.HashSet;
 import java.util.Set;
 
-// Valid Sudoku
+// 36. Valid Sudoku
 public class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         Set<String> seen = new HashSet<>();
