@@ -1,6 +1,6 @@
 package medium;
 
-// Sort Colors
+// 75. Sort Colors
 public class SortColors {
     public void sortColors(int[] nums) {
         int[] count = new int[3];
