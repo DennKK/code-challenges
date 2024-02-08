@@ -1,7 +1,7 @@
 package easy;
 
-// Find Pivot Index
-// Same as "Find the Middle Index in Array" task
+// 724. Find Pivot Index
+// Same as 1991. Find the Middle Index in Array
 public class FindPivotIndex {
     public int pivotIndex(int[] nums) {
         int[] leftSum = new int[nums.length];
