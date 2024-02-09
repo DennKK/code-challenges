@@ -1,6 +1,6 @@
 package easy;
 
-// Greatest Common Divisor Of Strings
+// 1071. Greatest Common Divisor of Strings
 public class GreatestCommonDivisorOfStrings {
     public boolean isDivisor(int len, String str1, String str2) {
         int len1 = str1.length(), len2 = str2.length();
