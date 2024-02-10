@@ -1,6 +1,6 @@
 package easy;
 
-// Is Subsequence
+// 392. Is Subsequence
 public class IsSubsequence {
     public boolean isSubsequence(String s, String t) {
         int i = 0, j = 0;
