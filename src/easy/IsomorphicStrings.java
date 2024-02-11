@@ -1,6 +1,6 @@
 package easy;
 
-// Isomorphic Strings
+// 205. Isomorphic Strings
 public class IsomorphicStrings {
     public boolean isIsomorphic(String s, String t) {
         int[] map1 = new int[256];
