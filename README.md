@@ -1,4 +1,4 @@
-﻿# LeetCode Solutions    
+﻿# LeetCode Solutions
 This repository contains my solutions to LeetCode problems at different levels. I aim to improve my problem solving skills in Java by solving various algorithmic problems. Also I want to store my progress in one place.  
 
 ## LeetCode Profile
