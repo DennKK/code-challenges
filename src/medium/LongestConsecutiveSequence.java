@@ -3,7 +3,7 @@ package medium;
 import java.util.HashSet;
 import java.util.Set;
 
-// Longest Consecutive Sequence
+// 128. Longest Consecutive Sequence
 public class LongestConsecutiveSequence {
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
@@ -12,10 +12,10 @@ public class LongestConsecutiveSequence {
         }
 
         int longestLen = 0;
-        for(int n : set) {
+        for (int n : set) {
             if (!set.contains(n - 1)) {
                 int length = 0;
-                while (set.contains(n + length))  {
+                while (set.contains(n + length)) {
                     length += 1;
                 }
                 longestLen = Math.max(length, longestLen);
