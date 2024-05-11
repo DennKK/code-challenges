@@ -34,3 +34,35 @@ public class EncodeAndDecodeStrings {
         return res;
     }
 }
+
+// Second solution
+class EncodeAndDecodeStrings2 {
+
+    public String encode(List<String> strs) {
+        StringBuilder sb = new StringBuilder();
+        for (String str : strs) {
+            sb.append(str.length());
+            sb.append("#");
+            sb.append(str);
+        }
+        return sb.toString();
+    }
+
+    public List<String> decode(String str) {
+        List<String> decoded = new ArrayList<>();
+
+        int i = 0;
+        while (i < str.length()) {
+            int start = i;
+            while (str.charAt(i) != '#') {
+                i++;
+            }
+
+            int wordLen = Integer.parseInt(str.substring(start, i));
+            decoded.add(str.substring(i + 1, i + 1 + wordLen));
+            i = i + 1 + wordLen;
+        }
+
+        return decoded;
+    }
+}
