@@ -30,3 +30,32 @@ public class KokoEatingBananas {
         return res;
     }
 }
+
+class Solution {
+    public int minEatingSpeed(int[] piles, int h) {
+        int maxBananas = -1;
+        for (int p : piles) {
+            maxBananas = Math.max(maxBananas, p);
+        }
+
+        int l = 1, r = maxBananas;
+        int res = r;
+        while (l <= r) {
+            int k = l + (r - l) / 2;
+            long hours = 0;
+
+            for (int p : piles) {
+                hours += (p + k - 1) / k;
+            }
+
+            if (hours > h) {
+                l = k + 1;
+            } else {
+                res = Math.min(res, k);
+                r = k - 1;
+            }
+        }
+
+        return res;
+    }
+}
