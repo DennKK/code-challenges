@@ -25,3 +25,27 @@ public class SearchInRotatedSortedArray {
         return -1;
     }
 }
+
+class SearchInRotatedSortedArray2 {
+    public int findMin(int[] nums) {
+        int numsLen = nums.length;
+        int l = 0, r = numsLen - 1;
+        int minN = Integer.MAX_VALUE;
+
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            int guess = nums[mid];
+            minN = Math.min(guess, minN);
+
+            if (nums[l] <= guess) {
+                minN = Math.min(nums[l], minN);
+                l = mid + 1;
+            } else if (nums[l] > nums[r]) {
+                minN = Math.min(nums[r], minN);
+                r = mid - 1;
+            }
+        }
+
+        return minN;
+    }
+}
