@@ -16,7 +16,7 @@ class Pair {
     }
 }
 
-class TimeMap {
+public class TimeMap {
     private static Map<String, List<Pair>> map;
 
     public TimeMap() {
@@ -49,5 +49,39 @@ class TimeMap {
         }
 
         return res;
+    }
+}
+
+class TimeMap2 {
+    private final Map<String, List<Pair2<Integer, String>>> store;
+
+    public TimeMap2() {
+        store = new HashMap<>();
+    }
+
+    public void set(String key, String value, int timestamp) {
+        store.computeIfAbsent(key, k -> new ArrayList<>()).add(new Pair2<>(timestamp, value));
+    }
+
+    public String get(String key, int timestamp) {
+        String res = "";
+        List<Pair2<Integer, String>> values = store.getOrDefault(key, new ArrayList<>());
+
+        int l = 0, r = values.size() - 1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+
+            if (values.get(mid).key() <= timestamp) {
+                res = values.get(mid).value();
+                l = mid + 1;
+            } else {
+                r = mid - 1;
+            }
+        }
+
+        return res;
+    }
+
+    private record Pair2<K, V>(K key, V value) {
     }
 }
