@@ -15,7 +15,7 @@ public class MergeLists {
         }
     }
 
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode();
         ListNode tail = dummy;
 
