@@ -86,4 +86,21 @@ public class BinaryTreePostorderTraversal {
         }
         return res;
     }
+
+    private final List<Integer> res = new ArrayList<>();
+
+    private List<Integer> postorderTraversal(TreeNode root) {
+        postorder(root);
+        return res;
+    }
+
+    private void postorder(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        postorder(node.left);
+        postorder(node.right);
+        res.add(node.val);
+    }
 }
