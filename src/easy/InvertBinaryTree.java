@@ -1,5 +1,7 @@
 package easy;
 
+import java.util.Stack;
+
 // 226. Invert Binary Tree
 public class InvertBinaryTree {
     private static class TreeNode {
@@ -21,7 +23,7 @@ public class InvertBinaryTree {
         }
     }
 
-    private TreeNode invertTree(TreeNode root) {
+    private TreeNode invertTreeRecursively(TreeNode root) {
         if (root == null) {
             return null;
         }
@@ -29,8 +31,27 @@ public class InvertBinaryTree {
         TreeNode temp = root.left;
         root.left = root.right;
         root.right = temp;
-        invertTree(root.left);
-        invertTree(root.right);
+        invertTreeRecursively(root.left);
+        invertTreeRecursively(root.right);
+
+        return root;
+    }
+
+    private TreeNode invertTreeIteratively(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+
+            if (cur != null) {
+                TreeNode temp = cur.right;
+                cur.right = cur.left;
+                cur.left = temp;
+                stack.push(cur.right);
+                stack.push(cur.left);
+            }
+        }
 
         return root;
     }
