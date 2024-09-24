@@ -1,12 +1,18 @@
-﻿# LeetCode Solutions
-This repository contains my solutions to LeetCode problems at different levels. I aim to improve my problem solving skills in Java by solving various algorithmic problems. Also I want to store my progress in one place.  
+# Code Challenges Solutions
+This repository contains my solutions to various code challenge platforms including LeetCode, CSES, and Codeforces. I aim to improve my problem-solving skills primarily in Java by tackling algorithmic problems from different categories. Additionally, this repository serves as a way to track and store my progress across multiple platforms.
 
-## LeetCode Profile
-You can view my LeetCode profile [here](https://leetcode.com/DennKK/), where you can find more information about my activity and solutions.
+## Platforms
+You can find my profile and progress on the following platforms:
+- **LeetCode**: [View Profile](https://leetcode.com/DennKK/)
+- **CSES**: [View Profile](insert link here)
+- **Codeforces**: [View Profile](insert link here)
 
 ## Table of Contents
-* [Easy](./src/easy) - Contains solutions for problems categorized as "Easy" level on LeetCode.
-* [Medium](./src/medium) - Contains solutions for problems categorized as "Medium" level on LeetCode.
-* [Hard](./src/hard) - Contains solutions for problems categorized as "Hard" level on LeetCode
+* [LeetCode](./src/code-challenges/leetcode) - Solutions for problems from LeetCode, categorized by difficulty:
+  - [Easy](./src/code-challenges/leetcode/easy)
+  - [Medium](./src/code-challenges/leetcode/medium)
+  - [Hard](./src/code-challenges/leetcode/hard)
+* [CSES](./src/code-challenges/cses) - Solutions for problems from CSES Problem Set.
+* [Codeforces](./src/code-challenges/codeforces) - Solutions for problems from Codeforces contests.
 
 Feel free to explore the solutions and provide any feedback or suggestions for improvement.
