@@ -1,37 +1,42 @@
+package codeforces.b;
 
 import java.util.Scanner;
 
+// 	118B - Present from Lena
 public class PresentFromLena {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
-        int amountOfLevels = n * 2 + 1;
-        String[] res = new String[amountOfLevels];
-        for (int level = 0; level < n + 1; level++) {
-            StringBuilder sb = new StringBuilder();
-            for (int spaces = 0; spaces < (n - level); spaces++) {
-                sb.append(" ");
-            }
-            if (level == 0) {
-                sb.append(0);
-            } else {
-                for (int digit = 0; digit <= level; digit++) {
-                    sb.append(digit);
-                }
-                for (int digit = level - 1; digit >= 0; digit--) {
-                    sb.append(digit);
-                }
-            }
-            res[level] = sb.toString();
+        // Print the top of the pyramid with the middle level
+        for (int level = 0; level <= n; level++) {
+            printLevel(level, n);
         }
 
-        for (int i = n - 1; i >= 0; i--) {
-            res[n * 2 - i] = res[i];
+        // Print lower part of pyramid
+        for (int level = n - 1; level >= 0; level--) {
+            printLevel(level, n);
+        }
+    }
+
+    private static void printLevel(int level, int n) {
+        for (int spaces = 0; spaces < n - level; spaces++) {
+            System.out.print("  "); // Two spaces
         }
 
-        for (int i = 0; i < amountOfLevels; i++) {
-            System.out.println(res[i]);
+        // From 0 to level
+        for (int digit = 0; digit <= level; digit++) {
+            System.out.print(digit);
+            if (digit < level) {
+                System.out.print(" ");
+            }
         }
+
+        // From level - 1 to zero
+        for (int digit = level - 1; digit >= 0; digit--) {
+            System.out.print(" " + digit);
+        }
+
+        System.out.println();
     }
 }
